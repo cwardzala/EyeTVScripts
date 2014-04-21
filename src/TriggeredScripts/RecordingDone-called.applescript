@@ -45,7 +45,7 @@ on run argv
             set thisEpisode to (episode of recording id myid as text)
         end tell
 
-        set cleanEpisode to CleanName(thisEpisode as string)
+        set cleanEpisode to (my CleanName(thisEpisode as string))
 
         -- Now we're gonna go to the finder, find the show and grab the file out of the package that has the meta data. It'll be written to a temp file and we'll grab the season and episode # from it.
         tell application "Finder"
